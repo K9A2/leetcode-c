@@ -93,8 +93,8 @@ struct TreeNode *invertTree(struct TreeNode *root) {
         return NULL;
     }
 
-    struct TreeNode* left_1 = root->left;
-    struct TreeNode* right_1 = root->right;
+    struct TreeNode *left_1 = root->left;
+    struct TreeNode *right_1 = root->right;
 
     root->left = right_1;
     root->right = left_1;
@@ -105,18 +105,47 @@ struct TreeNode *invertTree(struct TreeNode *root) {
     return root;
 }
 
+/* 283. Move Zeroes */
+void moveZeroes(int *nums, int numsSize) {
+
+    int pos = 0;
+    int zeros = 0;
+
+    int left = 0;
+    int right = 0;
+
+    int front = 0;
+    int rare = 0;
+
+    while (pos < numsSize) {
+        while (nums[pos] == 0 && pos < numsSize) {
+            pos++;
+        }
+        right = pos - 1;
+        zeros = right - left + 1;
+        front = pos;
+        while (nums[pos] != 0 && pos < numsSize) {
+            pos++;
+        }
+        rare = pos - 1;
+        for (int i = 0; i < rare - front + 1; i++) {
+            nums[left + i] = nums[left + i + zeros];
+        }
+        left = rare - zeros + 1;
+    }
+
+    for (int i = 0; i < zeros; i++) {
+        nums[left + i] = 0;
+    }
+
+}
+
 int main() {
 
-    struct TreeNode *t1_root = createNewNode(1);
-    struct TreeNode *t1_l1 = createNewNode(3);
-    struct TreeNode *t1_r1 = createNewNode(2);
-    struct TreeNode *t1_l2 = createNewNode(5);
+    int testCase[] = {0, 0, 1, 2, 3, 4, 0, 5, 0, 0, 7, 9, 0, 0, 0};
+    int size = sizeof(testCase) / sizeof(int);
 
-    t1_root->left = t1_l1;
-    t1_root->right = t1_r1;
-    t1_l1->left = t1_l2;
-
-    struct TreeNode *result = invertTree(t1_root);
+    moveZeroes(testCase, size);
 
     return 0;
 }
