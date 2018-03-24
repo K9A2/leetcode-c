@@ -86,6 +86,25 @@ int maxDepth(struct TreeNode *root) {
 
 }
 
+/* 226. Invert Binary Tree */
+struct TreeNode *invertTree(struct TreeNode *root) {
+
+    if (root == NULL) {
+        return NULL;
+    }
+
+    struct TreeNode* left_1 = root->left;
+    struct TreeNode* right_1 = root->right;
+
+    root->left = right_1;
+    root->right = left_1;
+
+    invertTree(root->left);
+    invertTree(root->right);
+
+    return root;
+}
+
 int main() {
 
     struct TreeNode *t1_root = createNewNode(1);
@@ -97,7 +116,7 @@ int main() {
     t1_root->right = t1_r1;
     t1_l1->left = t1_l2;
 
-    printf("%d\n", maxDepth(t1_root));
+    struct TreeNode *result = invertTree(t1_root);
 
     return 0;
 }
