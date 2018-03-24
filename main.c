@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <math.h>
 
 /* ---- Definition for a binary tree node ---- */
 struct TreeNode {
@@ -140,12 +141,41 @@ void moveZeroes(int *nums, int numsSize) {
 
 }
 
+/* 448. Find All Numbers Disappeared in an Array */
+int *findDisappearedNumbers(int *nums, int numsSize, int *returnSize) {
+
+    int count = 0;
+
+    for (int i = 0; i < numsSize; i++) {
+        int index = abs(nums[i]) - 1;
+        if (nums[index] > 0) {
+            nums[index] = 0 - nums[index];
+        } else {
+            count++;
+        }
+    }
+
+    int *result = (int *) malloc(sizeof(int) * count);
+    *returnSize = count;
+    count -= 1;
+    for (int i = 0; i < numsSize && count >= 0; i++) {
+        if (nums[i] > 0) {
+            *(result + count) = i + 1;
+            count -= 1;
+        }
+    }
+
+    return result;
+
+}
+
 int main() {
 
-    int testCase[] = {0, 0, 1, 2, 3, 4, 0, 5, 0, 0, 7, 9, 0, 0, 0};
-    int size = sizeof(testCase) / sizeof(int);
+    int nums[] = {4, 3, 2, 7, 8, 2, 3, 1};
+    int numsSize = sizeof(nums) / sizeof(int);
+    int returnSize = 0;
 
-    moveZeroes(testCase, size);
+    int *result = findDisappearedNumbers(nums, numsSize, &returnSize);
 
     return 0;
 }
