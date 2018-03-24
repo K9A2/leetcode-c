@@ -66,6 +66,7 @@ struct TreeNode *mergeTrees(struct TreeNode *t1, struct TreeNode *t2) {
     return newRoot;
 }
 
+/* 136. Single Number */
 int singleNumber(int *nums, int numsSize) {
     for (int i = 1; i < numsSize; i++) {
         nums[0] ^= nums[i];
@@ -73,12 +74,30 @@ int singleNumber(int *nums, int numsSize) {
     return nums[0];
 }
 
+/* 104. Maximum Depth of Binary Tree */
+int maxDepth(struct TreeNode *root) {
+
+    if (!root) {
+        return 0;
+    }
+    int leftHeight = maxDepth(root->left);
+    int rightHeight = maxDepth(root->right);
+    return leftHeight > rightHeight ? leftHeight + 1 : rightHeight + 1;
+
+}
+
 int main() {
 
-    int testCase[] = {1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 8};
-    int size = sizeof(testCase) / sizeof(int);
+    struct TreeNode *t1_root = createNewNode(1);
+    struct TreeNode *t1_l1 = createNewNode(3);
+    struct TreeNode *t1_r1 = createNewNode(2);
+    struct TreeNode *t1_l2 = createNewNode(5);
 
-    printf("%d\n", singleNumber(testCase, size));
+    t1_root->left = t1_l1;
+    t1_root->right = t1_r1;
+    t1_l1->left = t1_l2;
+
+    printf("%d\n", maxDepth(t1_root));
 
     return 0;
 }
