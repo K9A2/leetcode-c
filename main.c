@@ -2,13 +2,22 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-int hammingDistance(int x, int y);
+/* ---- Definition for a binary tree node ---- */
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+};
 
-int main() {
-    printf("%d\n", hammingDistance(2, 13));
-    return 0;
+struct TreeNode *createNewNode(int val) {
+    struct TreeNode *newNode = (struct TreeNode *) malloc(sizeof(struct TreeNode));
+    newNode->left = NULL;
+    newNode->right = NULL;
+    newNode->val = val;
+    return newNode;
 }
 
+/* 461. Hamming Distance */
 int hammingDistance(int x, int y) {
     x = x ^ y;
     y = 0;
@@ -20,3 +29,70 @@ int hammingDistance(int x, int y) {
     }
     return y;
 }
+
+/* 617. Merge Two Binary Trees */
+struct TreeNode *mergeTrees(struct TreeNode *t1, struct TreeNode *t2) {
+
+    if (t1 == NULL && t2 == NULL) {
+        return NULL;
+    }
+
+    struct TreeNode *newRoot = (struct TreeNode *) malloc(sizeof(struct TreeNode));
+    newRoot->left = NULL;
+    newRoot->right = NULL;
+
+    struct TreeNode *left_1 = NULL, *left_2 = NULL;
+    struct TreeNode *right_1 = NULL, *right_2 = NULL;
+
+    if (t1 != NULL && t2 != NULL) {
+        newRoot->val = t1->val + t2->val;
+        left_1 = t1->left;
+        left_2 = t2->left;
+        right_1 = t1->right;
+        right_2 = t2->right;
+    } else if (t1 == NULL && t2 != NULL) {
+        newRoot->val = t2->val;
+        left_1 = t2->left;
+        right_1 = t2->right;
+    } else if (t1 != NULL && t2 == NULL) {
+        newRoot->val = t1->val;
+        left_2 = t1->left;
+        right_2 = t1->right;
+    }
+
+    newRoot->left = mergeTrees(left_1, left_2);
+    newRoot->right = mergeTrees(right_1, right_2);
+
+    return newRoot;
+}
+
+int main() {
+
+    struct TreeNode *t1_root = createNewNode(1);
+    struct TreeNode *t1_l1 = createNewNode(3);
+    struct TreeNode *t1_r1 = createNewNode(2);
+    struct TreeNode *t1_l2 = createNewNode(5);
+
+    t1_root->left = t1_l1;
+    t1_root->right = t1_r1;
+    t1_l1->left = t1_l2;
+
+    struct TreeNode *t2_root = createNewNode(2);
+    struct TreeNode *t2_l1 = createNewNode(1);
+    struct TreeNode *t2_r1 = createNewNode(3);
+    struct TreeNode *t2_r2 = createNewNode(4);
+    struct TreeNode *t2_r3 = createNewNode(7);
+
+    t2_root->left = t2_l1;
+    t2_root->right = t2_r1;
+    t2_l1->right = t2_r2;
+    t2_r1->right = t2_r3;
+
+    struct TreeNode *result = mergeTrees(t1_root, t2_root);
+
+    return 0;
+}
+
+
+
+
