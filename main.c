@@ -66,29 +66,19 @@ struct TreeNode *mergeTrees(struct TreeNode *t1, struct TreeNode *t2) {
     return newRoot;
 }
 
+int singleNumber(int *nums, int numsSize) {
+    for (int i = 1; i < numsSize; i++) {
+        nums[0] ^= nums[i];
+    }
+    return nums[0];
+}
+
 int main() {
 
-    struct TreeNode *t1_root = createNewNode(1);
-    struct TreeNode *t1_l1 = createNewNode(3);
-    struct TreeNode *t1_r1 = createNewNode(2);
-    struct TreeNode *t1_l2 = createNewNode(5);
+    int testCase[] = {1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 8};
+    int size = sizeof(testCase) / sizeof(int);
 
-    t1_root->left = t1_l1;
-    t1_root->right = t1_r1;
-    t1_l1->left = t1_l2;
-
-    struct TreeNode *t2_root = createNewNode(2);
-    struct TreeNode *t2_l1 = createNewNode(1);
-    struct TreeNode *t2_r1 = createNewNode(3);
-    struct TreeNode *t2_r2 = createNewNode(4);
-    struct TreeNode *t2_r3 = createNewNode(7);
-
-    t2_root->left = t2_l1;
-    t2_root->right = t2_r1;
-    t2_l1->right = t2_r2;
-    t2_r1->right = t2_r3;
-
-    struct TreeNode *result = mergeTrees(t1_root, t2_root);
+    printf("%d\n", singleNumber(testCase, size));
 
     return 0;
 }
