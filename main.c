@@ -18,6 +18,11 @@ struct TreeNode *createNewNode(int val) {
     return newNode;
 }
 
+/* Compare the given numbers */
+int compare(const int *a, const int *b) {
+    return *a > *b;
+}
+
 /* 461. Hamming Distance */
 int hammingDistance(int x, int y) {
     x = x ^ y;
@@ -169,13 +174,20 @@ int *findDisappearedNumbers(int *nums, int numsSize, int *returnSize) {
 
 }
 
+/* 169. Majority Element */
+int majorityElement(int *nums, int numsSize) {
+
+    qsort(nums, (size_t) numsSize, sizeof(int), compare);
+
+    return nums[numsSize / 2];
+}
+
 int main() {
 
-    int nums[] = {4, 3, 2, 7, 8, 2, 3, 1};
+    int nums[] = {1, 2, 3, 4, 6, 5, 1, 2, 4, 9, 3, 8, 1, 2, 2, 1};
     int numsSize = sizeof(nums) / sizeof(int);
-    int returnSize = 0;
 
-    int *result = findDisappearedNumbers(nums, numsSize, &returnSize);
+    int result = majorityElement(nums, numsSize);
 
     return 0;
 }
