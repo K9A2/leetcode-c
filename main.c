@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
-#include <math.h>
 
 /* ---- Definition for a binary tree node ---- */
 struct TreeNode {
@@ -18,9 +16,24 @@ struct TreeNode *createNewNode(int val) {
     return newNode;
 }
 
+/* ---- Definition for a linked list node ---- */
+struct ListNode {
+    int val;
+    struct ListNode *next;
+};
+
+/* Print the given list on console */
+void printList(struct ListNode *head) {
+    struct ListNode *temp = head;
+    while (temp != NULL) {
+        printf("%d, ", temp->val);
+        temp = temp->next;
+    }
+}
+
 /* Compare the given numbers */
-int compare(const int *a, const int *b) {
-    return *a > *b;
+int compare(const void *a, const void *b) {
+    return a > b;
 }
 
 /* 461. Hamming Distance */
@@ -28,7 +41,7 @@ int hammingDistance(int x, int y) {
     x = x ^ y;
     y = 0;
     for (int i = 0; i < 32; i++) {
-        if (x & 1 == true) {
+        if (x & 1 == 1) {
             y++;
         }
         x = x >> 1;
@@ -177,17 +190,56 @@ int *findDisappearedNumbers(int *nums, int numsSize, int *returnSize) {
 /* 169. Majority Element */
 int majorityElement(int *nums, int numsSize) {
 
-    qsort(nums, (size_t) numsSize, sizeof(int), compare);
+    qsort(nums, (size_t) numsSize, sizeof(int), &compare);
 
     return nums[numsSize / 2];
 }
 
+/* 206. Reverse Linked List */
+struct ListNode *reverseList(struct ListNode *head) {
+
+    if (head == NULL || head->next == NULL) {
+        return head;
+    }
+
+    struct ListNode *c = head;
+    struct ListNode *p = NULL;
+    struct ListNode *n = head->next;
+
+    while (n != NULL) {
+        c->next = p;
+        p = c;
+        c = n;
+        n = c->next;
+    }
+    c->next = p;
+
+    return c;
+}
+
 int main() {
 
-    int nums[] = {1, 2, 3, 4, 6, 5, 1, 2, 4, 9, 3, 8, 1, 2, 2, 1};
+    int nums[] = {1, 2, 3, 4, 5, 6, 7};
     int numsSize = sizeof(nums) / sizeof(int);
 
-    int result = majorityElement(nums, numsSize);
+    struct ListNode list[numsSize];
+
+    for (int i = 0; i < numsSize; i++) {
+        list[i].val = nums[i];
+    }
+
+    for (int i = 0; i < numsSize - 1; i++) {
+        list[i].next = &list[i + 1];
+    }
+    list[numsSize - 1].next = NULL;
+
+    printList(&list[0]);
+
+    struct ListNode *result = reverseList(list);
+
+    printf("\n");
+
+    printList(result);
 
     return 0;
 }
