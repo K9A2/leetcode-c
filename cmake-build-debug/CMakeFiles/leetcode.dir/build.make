@@ -81,17 +81,121 @@ CMakeFiles/leetcode.dir/main.c.o.provides: CMakeFiles/leetcode.dir/main.c.o.requ
 CMakeFiles/leetcode.dir/main.c.o.provides.build: CMakeFiles/leetcode.dir/main.c.o
 
 
+CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o: CMakeFiles/leetcode.dir/flags.make
+CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o: ../BinaryTree/BinaryTree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stormlin/project/leetcode-c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o   -c /home/stormlin/project/leetcode-c/BinaryTree/BinaryTree.c
+
+CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/stormlin/project/leetcode-c/BinaryTree/BinaryTree.c > CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.i
+
+CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/stormlin/project/leetcode-c/BinaryTree/BinaryTree.c -o CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.s
+
+CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o.requires:
+
+.PHONY : CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o.requires
+
+CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o.provides: CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o.requires
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o.provides.build
+.PHONY : CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o.provides
+
+CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o.provides.build: CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o
+
+
+CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o: CMakeFiles/leetcode.dir/flags.make
+CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o: ../LinkedList/LinkedList.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stormlin/project/leetcode-c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o   -c /home/stormlin/project/leetcode-c/LinkedList/LinkedList.c
+
+CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/stormlin/project/leetcode-c/LinkedList/LinkedList.c > CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.i
+
+CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/stormlin/project/leetcode-c/LinkedList/LinkedList.c -o CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.s
+
+CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o.requires:
+
+.PHONY : CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o.requires
+
+CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o.provides: CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o.requires
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o.provides.build
+.PHONY : CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o.provides
+
+CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o.provides.build: CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o
+
+
+CMakeFiles/leetcode.dir/HashMap/HashMap.c.o: CMakeFiles/leetcode.dir/flags.make
+CMakeFiles/leetcode.dir/HashMap/HashMap.c.o: ../HashMap/HashMap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stormlin/project/leetcode-c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/leetcode.dir/HashMap/HashMap.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leetcode.dir/HashMap/HashMap.c.o   -c /home/stormlin/project/leetcode-c/HashMap/HashMap.c
+
+CMakeFiles/leetcode.dir/HashMap/HashMap.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/leetcode.dir/HashMap/HashMap.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/stormlin/project/leetcode-c/HashMap/HashMap.c > CMakeFiles/leetcode.dir/HashMap/HashMap.c.i
+
+CMakeFiles/leetcode.dir/HashMap/HashMap.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/leetcode.dir/HashMap/HashMap.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/stormlin/project/leetcode-c/HashMap/HashMap.c -o CMakeFiles/leetcode.dir/HashMap/HashMap.c.s
+
+CMakeFiles/leetcode.dir/HashMap/HashMap.c.o.requires:
+
+.PHONY : CMakeFiles/leetcode.dir/HashMap/HashMap.c.o.requires
+
+CMakeFiles/leetcode.dir/HashMap/HashMap.c.o.provides: CMakeFiles/leetcode.dir/HashMap/HashMap.c.o.requires
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/HashMap/HashMap.c.o.provides.build
+.PHONY : CMakeFiles/leetcode.dir/HashMap/HashMap.c.o.provides
+
+CMakeFiles/leetcode.dir/HashMap/HashMap.c.o.provides.build: CMakeFiles/leetcode.dir/HashMap/HashMap.c.o
+
+
+CMakeFiles/leetcode.dir/Util/Util.c.o: CMakeFiles/leetcode.dir/flags.make
+CMakeFiles/leetcode.dir/Util/Util.c.o: ../Util/Util.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/stormlin/project/leetcode-c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/leetcode.dir/Util/Util.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/leetcode.dir/Util/Util.c.o   -c /home/stormlin/project/leetcode-c/Util/Util.c
+
+CMakeFiles/leetcode.dir/Util/Util.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/leetcode.dir/Util/Util.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/stormlin/project/leetcode-c/Util/Util.c > CMakeFiles/leetcode.dir/Util/Util.c.i
+
+CMakeFiles/leetcode.dir/Util/Util.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/leetcode.dir/Util/Util.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/stormlin/project/leetcode-c/Util/Util.c -o CMakeFiles/leetcode.dir/Util/Util.c.s
+
+CMakeFiles/leetcode.dir/Util/Util.c.o.requires:
+
+.PHONY : CMakeFiles/leetcode.dir/Util/Util.c.o.requires
+
+CMakeFiles/leetcode.dir/Util/Util.c.o.provides: CMakeFiles/leetcode.dir/Util/Util.c.o.requires
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/Util/Util.c.o.provides.build
+.PHONY : CMakeFiles/leetcode.dir/Util/Util.c.o.provides
+
+CMakeFiles/leetcode.dir/Util/Util.c.o.provides.build: CMakeFiles/leetcode.dir/Util/Util.c.o
+
+
 # Object files for target leetcode
 leetcode_OBJECTS = \
-"CMakeFiles/leetcode.dir/main.c.o"
+"CMakeFiles/leetcode.dir/main.c.o" \
+"CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o" \
+"CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o" \
+"CMakeFiles/leetcode.dir/HashMap/HashMap.c.o" \
+"CMakeFiles/leetcode.dir/Util/Util.c.o"
 
 # External object files for target leetcode
 leetcode_EXTERNAL_OBJECTS =
 
 leetcode: CMakeFiles/leetcode.dir/main.c.o
+leetcode: CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o
+leetcode: CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o
+leetcode: CMakeFiles/leetcode.dir/HashMap/HashMap.c.o
+leetcode: CMakeFiles/leetcode.dir/Util/Util.c.o
 leetcode: CMakeFiles/leetcode.dir/build.make
 leetcode: CMakeFiles/leetcode.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/stormlin/project/leetcode-c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable leetcode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/stormlin/project/leetcode-c/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable leetcode"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/leetcode.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,6 +204,10 @@ CMakeFiles/leetcode.dir/build: leetcode
 .PHONY : CMakeFiles/leetcode.dir/build
 
 CMakeFiles/leetcode.dir/requires: CMakeFiles/leetcode.dir/main.c.o.requires
+CMakeFiles/leetcode.dir/requires: CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o.requires
+CMakeFiles/leetcode.dir/requires: CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o.requires
+CMakeFiles/leetcode.dir/requires: CMakeFiles/leetcode.dir/HashMap/HashMap.c.o.requires
+CMakeFiles/leetcode.dir/requires: CMakeFiles/leetcode.dir/Util/Util.c.o.requires
 
 .PHONY : CMakeFiles/leetcode.dir/requires
 

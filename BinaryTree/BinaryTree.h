@@ -1,8 +1,16 @@
-//
-// Created by stormlin on 18-3-26.
-//
+#ifndef BINARY_TREE_C
+#define BINARY_TREE_C
 
-#ifndef JNU_BINARYTREE_H
-#define JNU_BINARYTREE_H
+#include <stdio.h>
+#include <stdlib.h>
 
-#endif //JNU_BINARYTREE_H
+#endif
+
+/* ---- Definition for a binary tree node ---- */
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+};
+
+struct TreeNode *createTreeNode(int val);

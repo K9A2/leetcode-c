@@ -8,6 +8,8 @@
 
 /* ---- Definition for a linked list node ---- */
 struct ListNode {
+    int val;
+    struct ListNode *next;
 };
 
 /* Print the given list on console */

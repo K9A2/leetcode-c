@@ -123,6 +123,114 @@ leetcode/fast:
 	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/build
 .PHONY : leetcode/fast
 
+BinaryTree/BinaryTree.o: BinaryTree/BinaryTree.c.o
+
+.PHONY : BinaryTree/BinaryTree.o
+
+# target to build an object file
+BinaryTree/BinaryTree.c.o:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o
+.PHONY : BinaryTree/BinaryTree.c.o
+
+BinaryTree/BinaryTree.i: BinaryTree/BinaryTree.c.i
+
+.PHONY : BinaryTree/BinaryTree.i
+
+# target to preprocess a source file
+BinaryTree/BinaryTree.c.i:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.i
+.PHONY : BinaryTree/BinaryTree.c.i
+
+BinaryTree/BinaryTree.s: BinaryTree/BinaryTree.c.s
+
+.PHONY : BinaryTree/BinaryTree.s
+
+# target to generate assembly for a file
+BinaryTree/BinaryTree.c.s:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.s
+.PHONY : BinaryTree/BinaryTree.c.s
+
+HashMap/HashMap.o: HashMap/HashMap.c.o
+
+.PHONY : HashMap/HashMap.o
+
+# target to build an object file
+HashMap/HashMap.c.o:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/HashMap/HashMap.c.o
+.PHONY : HashMap/HashMap.c.o
+
+HashMap/HashMap.i: HashMap/HashMap.c.i
+
+.PHONY : HashMap/HashMap.i
+
+# target to preprocess a source file
+HashMap/HashMap.c.i:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/HashMap/HashMap.c.i
+.PHONY : HashMap/HashMap.c.i
+
+HashMap/HashMap.s: HashMap/HashMap.c.s
+
+.PHONY : HashMap/HashMap.s
+
+# target to generate assembly for a file
+HashMap/HashMap.c.s:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/HashMap/HashMap.c.s
+.PHONY : HashMap/HashMap.c.s
+
+LinkedList/LinkedList.o: LinkedList/LinkedList.c.o
+
+.PHONY : LinkedList/LinkedList.o
+
+# target to build an object file
+LinkedList/LinkedList.c.o:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o
+.PHONY : LinkedList/LinkedList.c.o
+
+LinkedList/LinkedList.i: LinkedList/LinkedList.c.i
+
+.PHONY : LinkedList/LinkedList.i
+
+# target to preprocess a source file
+LinkedList/LinkedList.c.i:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.i
+.PHONY : LinkedList/LinkedList.c.i
+
+LinkedList/LinkedList.s: LinkedList/LinkedList.c.s
+
+.PHONY : LinkedList/LinkedList.s
+
+# target to generate assembly for a file
+LinkedList/LinkedList.c.s:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.s
+.PHONY : LinkedList/LinkedList.c.s
+
+Util/Util.o: Util/Util.c.o
+
+.PHONY : Util/Util.o
+
+# target to build an object file
+Util/Util.c.o:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/Util/Util.c.o
+.PHONY : Util/Util.c.o
+
+Util/Util.i: Util/Util.c.i
+
+.PHONY : Util/Util.i
+
+# target to preprocess a source file
+Util/Util.c.i:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/Util/Util.c.i
+.PHONY : Util/Util.c.i
+
+Util/Util.s: Util/Util.c.s
+
+.PHONY : Util/Util.s
+
+# target to generate assembly for a file
+Util/Util.c.s:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/Util/Util.c.s
+.PHONY : Util/Util.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -159,6 +267,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... leetcode"
+	@echo "... BinaryTree/BinaryTree.o"
+	@echo "... BinaryTree/BinaryTree.i"
+	@echo "... BinaryTree/BinaryTree.s"
+	@echo "... HashMap/HashMap.o"
+	@echo "... HashMap/HashMap.i"
+	@echo "... HashMap/HashMap.s"
+	@echo "... LinkedList/LinkedList.o"
+	@echo "... LinkedList/LinkedList.i"
+	@echo "... LinkedList/LinkedList.s"
+	@echo "... Util/Util.o"
+	@echo "... Util/Util.i"
+	@echo "... Util/Util.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

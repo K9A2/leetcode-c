@@ -6,12 +6,7 @@
 
 #endif
 
-/* ---- Definition for a binary tree node ---- */
-struct TreeNode {
-    int val;
-    struct TreeNode *left;
-    struct TreeNode *right;
-};
+#include "BinaryTree.h"
 
 struct TreeNode *createTreeNode(int val) {
     struct TreeNode *newNode = (struct TreeNode *) malloc(sizeof(struct TreeNode));

@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/leetcode.dir/main.c.o  -o leetcode 
+/usr/bin/cc -g   CMakeFiles/leetcode.dir/main.c.o CMakeFiles/leetcode.dir/BinaryTree/BinaryTree.c.o CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o CMakeFiles/leetcode.dir/HashMap/HashMap.c.o CMakeFiles/leetcode.dir/Util/Util.c.o  -o leetcode 

@@ -1,8 +1,9 @@
-//
-// Created by stormlin on 18-3-26.
-//
+#ifndef UTIL_C
+#define UTIL_C
 
-#ifndef JNU_UTIL_H
-#define JNU_UTIL_H
+#include <stdio.h>
+#include <stdlib.h>
 
-#endif //JNU_UTIL_H
+#endif
+/* Compare the given numbers */
+int compare(const void *a, const void *b);

@@ -6,11 +6,7 @@
 
 #endif
 
-/* ---- Definition for a linked list node ---- */
-struct ListNode {
-    int val;
-    struct ListNode *next;
-};
+#include "LinkedList.h"
 
 /* Print the given list on console */
 void printList(struct ListNode *head) {

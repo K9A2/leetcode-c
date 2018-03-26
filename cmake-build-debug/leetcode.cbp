@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="jnu"/>
+		<Option title="leetcode"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -106,9 +106,6 @@
 			<Option target="leetcode"/>
 		</Unit>
 		<Unit filename="/home/stormlin/project/leetcode-c/Util/Util.h">
-			<Option target="leetcode"/>
-		</Unit>
-		<Unit filename="/home/stormlin/project/leetcode-c/Util/asdfa.h">
 			<Option target="leetcode"/>
 		</Unit>
 		<Unit filename="/home/stormlin/project/leetcode-c/main.c">

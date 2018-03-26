@@ -137,7 +137,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=jnu
+CMAKE_PROJECT_NAME:STATIC=leetcode
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -199,6 +199,12 @@ jnu_BINARY_DIR:STATIC=/home/stormlin/project/leetcode-c/cmake-build-debug
 
 //Value Computed by CMake
 jnu_SOURCE_DIR:STATIC=/home/stormlin/project/leetcode-c
+
+//Value Computed by CMake
+leetcode_BINARY_DIR:STATIC=/home/stormlin/project/leetcode-c/cmake-build-debug
+
+//Value Computed by CMake
+leetcode_SOURCE_DIR:STATIC=/home/stormlin/project/leetcode-c
 
 
 ########################
