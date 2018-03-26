@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <omp.h>
 
 /* ---- Definition for a binary tree node ---- */
 struct TreeNode {
@@ -217,25 +218,77 @@ struct ListNode *reverseList(struct ListNode *head) {
     return c;
 }
 
+/* 21. Merge Two Sorted Lists */
+struct ListNode *mergeTwoLists(struct ListNode *l1, struct ListNode *l2) {
+
+    /* l1 and l2 are both non-null list */
+    struct ListNode *head = (struct ListNode *) malloc(sizeof(struct ListNode));
+    head->val = 0;
+    head->next = NULL;
+    struct ListNode *tail = head;
+
+    struct ListNode *p1 = l1;
+    struct ListNode *p2 = l2;
+
+    while (p1 != NULL && p2 != NULL) {
+        if (p1->val >= p2->val) {
+            tail->next = p2;
+            tail = tail->next;
+            p2 = p2->next;
+        } else {
+            tail->next = p1;
+            tail = tail->next;
+            p1 = p1->next;
+        }
+    }
+
+    if (p1 == NULL) {
+        tail->next = p2;
+    } else {
+        tail->next = p1;
+    }
+
+    struct ListNode *result = head->next;
+    free(head);
+    return result;
+}
+
 int main() {
 
-    int nums[] = {1, 2, 3, 4, 5, 6, 7};
-    int numsSize = sizeof(nums) / sizeof(int);
+    int nums_1[] = {1, 2, 3, 4, 5, 6, 7};
+    int numsSize_1 = sizeof(nums_1) / sizeof(int);
 
-    struct ListNode list[numsSize];
+    struct ListNode list_1[numsSize_1];
 
-    for (int i = 0; i < numsSize; i++) {
-        list[i].val = nums[i];
+    for (int i = 0; i < numsSize_1; i++) {
+        list_1[i].val = nums_1[i];
     }
 
-    for (int i = 0; i < numsSize - 1; i++) {
-        list[i].next = &list[i + 1];
+    for (int i = 0; i < numsSize_1 - 1; i++) {
+        list_1[i].next = &list_1[i + 1];
     }
-    list[numsSize - 1].next = NULL;
+    list_1[numsSize_1 - 1].next = NULL;
 
-    printList(&list[0]);
+    int nums_2[] = {1, 2, 4, 6, 8, 10};
+    int numsSize_2 = sizeof(nums_2) / sizeof(int);
+    struct ListNode list_2[numsSize_2];
 
-    struct ListNode *result = reverseList(list);
+    for (int i = 0; i < numsSize_2; i++) {
+        list_2[i].val = nums_2[i];
+    }
+
+    for (int i = 0; i < numsSize_2 - 1; i++) {
+        list_2[i].next = &list_2[i + 1];
+    }
+    list_2[numsSize_2 - 1].next = NULL;
+
+    printList(&list_1[0]);
+
+    printf("\n");
+
+    printList(&list_2[0]);
+
+    struct ListNode *result = mergeTwoLists(list_1, list_2);
 
     printf("\n");
 
