@@ -306,7 +306,6 @@ typedef struct {
     Stack *mins;
 } MinStack;
 
-/** initialize your data structure here. */
 MinStack *minStackCreate(int maxSize) {
     MinStack *minStack = (MinStack *) calloc(1, sizeof(MinStack));
     minStack->size = 0;
@@ -364,42 +363,67 @@ void minStackFree(MinStack *minStack) {
     free(minStack);
 }
 
-/**
- * Your MinStack struct will be instantiated and called as such:
- * struct MinStack* obj = minStackCreate(maxSize);
- * minStackPush(obj, x);
- * minStackPop(obj);
- * int param_3 = minStackTop(obj);
- * int param_4 = minStackGetMin(obj);
- * minStackFree(obj);
- */
+/* 160. Intersection of Two Linked Lists */
+struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) {
+
+    if (headA == NULL || headB == NULL) {
+        return NULL;
+    }
+
+    int lenA = 0;
+    int lenB = 0;
+
+    struct ListNode *l1 = headA;
+    struct ListNode *l2 = headB;
+
+    while (l1 != NULL) {
+        lenA += 1;
+        l1 = l1->next;
+    }
+    while (l2 != NULL) {
+        lenB += 1;
+        l2 = l2->next;
+    }
+
+    l1 = headA;
+    l2 = headB;
+    if (lenA < lenB) {
+        // headB is longer than headA
+        for (int i = 0; i < lenB - lenA; i++) {
+            l2 = l2->next;
+        }
+    } else {
+        // headA is longer than headB
+        for (int i = 0; i < lenA - lenB; i++) {
+            l1 = l1->next;
+        }
+    }
+
+    while (l1 && l2) {
+        if (l1 == l2) {
+            return l1;
+        }
+        l1 = l1->next;
+        l2 = l2->next;
+    }
+
+    return NULL;
+}
 
 int main() {
 
-    int nums[] = {2, 0, 3, 0};
-    int numsSize = sizeof(nums) / sizeof(int);
+    int numsA[] = {2, 3};
 
-    MinStack *minStack = minStackCreate(64);
+    struct ListNode headA[2];
+    headA[0].val = 2;
+    headA[0].next = &headA[1];
 
-    for (int i = 0; i < numsSize; i++) {
-        minStackPush(minStack, nums[i]);
-    }
+    headA[1].val = 3;
+    headA[1].next = NULL;
 
-    int min_1 = minStackGetMin(minStack);
+    struct ListNode *headB = &headA[1];
 
-    minStackPop(minStack);
-
-    int min_2 = minStackGetMin(minStack);
-
-    minStackPop(minStack);
-
-    int min_3 = minStackGetMin(minStack);
-
-    minStackPop(minStack);
-
-    int min_4 = minStackGetMin(minStack);
-
-    minStackFree(minStack);
+    struct ListNode *result = getIntersectionNode(headA, headB);
 
     return 0;
 }
