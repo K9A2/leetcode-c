@@ -1,5 +1,6 @@
 # User-specific stuff
 .idea/workspace.xml
+.idea/dictionaries/
 
 # CMake
 cmake-build-debug/
