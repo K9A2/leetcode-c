@@ -1,0 +1,9 @@
+# User-specific stuff
+.idea/workspace.xml
+
+# CMake
+cmake-build-debug/
+cmake-build-release/
+
+# node modules
+node_modules

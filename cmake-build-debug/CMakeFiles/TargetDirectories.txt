@@ -1,3 +1,0 @@
-/home/stormlin/project/leetcode-c/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/stormlin/project/leetcode-c/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/stormlin/project/leetcode-c/cmake-build-debug/CMakeFiles/leetcode.dir
