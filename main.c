@@ -298,13 +298,108 @@ bool isValid(char *s) {
     return stack->size == 0 ? true : false;
 }
 
+/* 155. Min Stack */
+typedef struct {
+    int size;
+    int maxSize;
+    Stack *nums;
+    Stack *mins;
+} MinStack;
+
+/** initialize your data structure here. */
+MinStack *minStackCreate(int maxSize) {
+    MinStack *minStack = (MinStack *) calloc(1, sizeof(MinStack));
+    minStack->size = 0;
+    minStack->maxSize = maxSize;
+    minStack->nums = (Stack *) calloc(1, sizeof(Stack));
+    minStack->mins = (Stack *) calloc(1, sizeof(Stack));
+    return minStack;
+}
+
+void minStackPush(MinStack *minStack, int x) {
+
+    if (minStack->size + 1 > minStack->maxSize) {
+        return;
+    }
+
+    if ((minStack->nums)->size == 0) {
+        /* There are no elements it */
+        push(minStack->nums, x);
+        push(minStack->mins, x);
+        return;
+    } else {
+        push(minStack->nums, x);
+
+        int minTop = getTop(minStack->mins);
+        if (x <= minTop) {
+            push(minStack->mins, x);
+        }
+    }
+}
+
+void minStackPop(MinStack *minStack) {
+
+    if (getTop(minStack->nums) == getTop(minStack->mins)) {
+        pop(minStack->mins);
+    }
+
+    pop(minStack->nums);
+
+}
+
+int minStackTop(MinStack *minStack) {
+    return getTop(minStack->nums);
+}
+
+int minStackGetMin(MinStack *minStack) {
+    return getTop(minStack->mins);
+}
+
+void minStackFree(MinStack *minStack) {
+
+    /* Delete internal stacks */
+    deleteStack(minStack->nums);
+    deleteStack(minStack->mins);
+
+    free(minStack);
+}
+
+/**
+ * Your MinStack struct will be instantiated and called as such:
+ * struct MinStack* obj = minStackCreate(maxSize);
+ * minStackPush(obj, x);
+ * minStackPop(obj);
+ * int param_3 = minStackTop(obj);
+ * int param_4 = minStackGetMin(obj);
+ * minStackFree(obj);
+ */
+
 int main() {
 
-    char *s = "[";
+    int nums[] = {2, 0, 3, 0};
+    int numsSize = sizeof(nums) / sizeof(int);
 
-    bool result = isValid(s);
+    MinStack *minStack = minStackCreate(64);
 
-    printf("%d\n", result);
+    for (int i = 0; i < numsSize; i++) {
+        minStackPush(minStack, nums[i]);
+    }
+
+    int min_1 = minStackGetMin(minStack);
+
+    minStackPop(minStack);
+
+    int min_2 = minStackGetMin(minStack);
+
+    minStackPop(minStack);
+
+    int min_3 = minStackGetMin(minStack);
+
+    minStackPop(minStack);
+
+    int min_4 = minStackGetMin(minStack);
+
+    minStackFree(minStack);
 
     return 0;
 }
