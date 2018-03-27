@@ -28,7 +28,7 @@ void push(Stack *stack, StackElementType val) {
 StackElementType pop(Stack *stack) {
 
     if (stack == NULL || stack->top == NULL) {
-        return NULL;
+        return (StackElementType) NULL;
     }
 
     StackElementType top = (stack->top)->val;
@@ -39,6 +39,15 @@ StackElementType pop(Stack *stack) {
 }
 
 void deleteStack(Stack *stack) {
+
+    if (stack == NULL) {
+        return;
+    }
+
+    if (stack->size == 0) {
+        free(stack);
+        return;
+    }
 
     /* Delete nodes */
     StackNode *f = stack->top;
