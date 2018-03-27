@@ -10,11 +10,15 @@ CMakeFiles/leetcode.dir/HashMap/HashMap.c.o: ../HashMap/HashMap.h
 CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o: ../LinkedList/LinkedList.c
 CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o: ../LinkedList/LinkedList.h
 
+CMakeFiles/leetcode.dir/Stack/Stack.c.o: ../Stack/Stack.c
+CMakeFiles/leetcode.dir/Stack/Stack.c.o: ../Stack/Stack.h
+
 CMakeFiles/leetcode.dir/Util/Util.c.o: ../Util/Util.c
 
 CMakeFiles/leetcode.dir/main.c.o: ../BinaryTree/BinaryTree.h
 CMakeFiles/leetcode.dir/main.c.o: ../HashMap/HashMap.h
 CMakeFiles/leetcode.dir/main.c.o: ../LinkedList/LinkedList.h
+CMakeFiles/leetcode.dir/main.c.o: ../Stack/Stack.h
 CMakeFiles/leetcode.dir/main.c.o: ../Util/Util.h
 CMakeFiles/leetcode.dir/main.c.o: ../main.c
 

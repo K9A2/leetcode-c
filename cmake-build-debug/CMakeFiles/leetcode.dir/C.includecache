@@ -52,6 +52,14 @@ stdio.h
 stdlib.h
 -
 
+/home/stormlin/project/leetcode-c/Stack/Stack.c
+Stack.h
+/home/stormlin/project/leetcode-c/Stack/Stack.h
+
+/home/stormlin/project/leetcode-c/Stack/Stack.h
+stdlib.h
+-
+
 /home/stormlin/project/leetcode-c/Util/Util.c
 stdio.h
 -
@@ -69,12 +77,16 @@ stdio.h
 -
 stdlib.h
 -
+memory.h
+-
 BinaryTree/BinaryTree.h
 /home/stormlin/project/leetcode-c/BinaryTree/BinaryTree.h
 HashMap/HashMap.h
 /home/stormlin/project/leetcode-c/HashMap/HashMap.h
 LinkedList/LinkedList.h
 /home/stormlin/project/leetcode-c/LinkedList/LinkedList.h
+Stack/Stack.h
+/home/stormlin/project/leetcode-c/Stack/Stack.h
 Util/Util.h
 /home/stormlin/project/leetcode-c/Util/Util.h
 

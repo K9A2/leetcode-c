@@ -3,5 +3,5 @@ project(leetcode)
 
 set(CMAKE_C_STANDARD 99)
 
-set(SOURCE_FILES main.c BinaryTree/BinaryTree.c LinkedList/LinkedList.c HashMap/HashMap.c Util/Util.c BinaryTree/BinaryTree.h LinkedList/LinkedList.h HashMap/HashMap.h Util/Util.h)
+set(SOURCE_FILES main.c BinaryTree/BinaryTree.c LinkedList/LinkedList.c HashMap/HashMap.c Util/Util.c BinaryTree/BinaryTree.h LinkedList/LinkedList.h HashMap/HashMap.h Util/Util.h Stack/Stack.c Stack/Stack.h)
 add_executable(leetcode ${SOURCE_FILES})

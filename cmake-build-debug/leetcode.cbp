@@ -102,6 +102,12 @@
 		<Unit filename="/home/stormlin/project/leetcode-c/LinkedList/LinkedList.h">
 			<Option target="leetcode"/>
 		</Unit>
+		<Unit filename="/home/stormlin/project/leetcode-c/Stack/Stack.c">
+			<Option target="leetcode"/>
+		</Unit>
+		<Unit filename="/home/stormlin/project/leetcode-c/Stack/Stack.h">
+			<Option target="leetcode"/>
+		</Unit>
 		<Unit filename="/home/stormlin/project/leetcode-c/Util/Util.c">
 			<Option target="leetcode"/>
 		</Unit>

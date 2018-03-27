@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.o"
   "CMakeFiles/leetcode.dir/HashMap/HashMap.c.o"
   "CMakeFiles/leetcode.dir/Util/Util.c.o"
+  "CMakeFiles/leetcode.dir/Stack/Stack.c.o"
   "leetcode.pdb"
   "leetcode"
 )

@@ -204,6 +204,33 @@ LinkedList/LinkedList.c.s:
 	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/LinkedList/LinkedList.c.s
 .PHONY : LinkedList/LinkedList.c.s
 
+Stack/Stack.o: Stack/Stack.c.o
+
+.PHONY : Stack/Stack.o
+
+# target to build an object file
+Stack/Stack.c.o:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/Stack/Stack.c.o
+.PHONY : Stack/Stack.c.o
+
+Stack/Stack.i: Stack/Stack.c.i
+
+.PHONY : Stack/Stack.i
+
+# target to preprocess a source file
+Stack/Stack.c.i:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/Stack/Stack.c.i
+.PHONY : Stack/Stack.c.i
+
+Stack/Stack.s: Stack/Stack.c.s
+
+.PHONY : Stack/Stack.s
+
+# target to generate assembly for a file
+Stack/Stack.c.s:
+	$(MAKE) -f CMakeFiles/leetcode.dir/build.make CMakeFiles/leetcode.dir/Stack/Stack.c.s
+.PHONY : Stack/Stack.c.s
+
 Util/Util.o: Util/Util.c.o
 
 .PHONY : Util/Util.o
@@ -276,6 +303,9 @@ help:
 	@echo "... LinkedList/LinkedList.o"
 	@echo "... LinkedList/LinkedList.i"
 	@echo "... LinkedList/LinkedList.s"
+	@echo "... Stack/Stack.o"
+	@echo "... Stack/Stack.i"
+	@echo "... Stack/Stack.s"
 	@echo "... Util/Util.o"
 	@echo "... Util/Util.i"
 	@echo "... Util/Util.s"
