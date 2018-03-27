@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <memory.h>
+#include <string.h>
 
 #include "BinaryTree/BinaryTree.h"
 #include "HashMap/HashMap.h"
@@ -410,24 +410,19 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
     return NULL;
 }
 
+int findKthLargest(int *nums, int numsSize, int k) {
+    qsort(nums, (size_t) numsSize, sizeof(int), compare);
+    return *(nums + numsSize - k);
+}
+
 int main() {
 
-    int numsA[] = {2, 3};
+    int nums[] = {3, 2, 1, 5, 6, 4};
+    int size = (size_t) (sizeof(nums) / sizeof(int));
 
-    struct ListNode headA[2];
-    headA[0].val = 2;
-    headA[0].next = &headA[1];
+    qsort(nums, (size_t) size, sizeof(int), compare);
 
-    headA[1].val = 3;
-    headA[1].next = NULL;
-
-    struct ListNode *headB = &headA[1];
-
-    struct ListNode *result = getIntersectionNode(headA, headB);
+    int result = findKthLargest(nums, sizeof(nums) / sizeof(int), 1);
 
     return 0;
 }
-
-
-
-
