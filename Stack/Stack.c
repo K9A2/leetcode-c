@@ -54,3 +54,7 @@ void deleteStack(Stack *stack) {
     free(stack);
 
 }
+
+StackElementType getTop(Stack *stack) {
+    return stack == NULL || stack->size == 0 ? (StackElementType) NULL : (stack->top)->val;
+}

@@ -3,7 +3,7 @@
 
 #include <stdlib.h>
 
-#define StackElementType char
+#define StackElementType int
 
 #endif
 
@@ -30,3 +30,5 @@ void push(Stack *stack, StackElementType val);
 StackElementType pop(Stack *stack);
 
 void deleteStack(Stack *stack);
+
+StackElementType getTop(Stack *stack);
