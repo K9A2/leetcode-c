@@ -410,19 +410,30 @@ struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *he
     return NULL;
 }
 
+/* 215. Kth Largest Element in an Array */
 int findKthLargest(int *nums, int numsSize, int k) {
     qsort(nums, (size_t) numsSize, sizeof(int), compare);
     return *(nums + numsSize - k);
 }
 
+/* 657. Judge Route Circle */
+bool judgeCircle(char *moves) {
+
+    int alphabet[26] = {0};
+    int len = (int) strlen(moves);
+
+    for (int i = 0; i < len; i++) {
+        alphabet[*moves++ - 65] += 1;
+    }
+
+    return (alphabet['U' - 65] == alphabet['D' - 65]) && (alphabet['L' - 65] == alphabet['R' - 65]) ? true : false;
+}
+
 int main() {
 
-    int nums[] = {3, 2, 1, 5, 6, 4};
-    int size = (size_t) (sizeof(nums) / sizeof(int));
+    char moves[] = "UD";
 
-    qsort(nums, (size_t) size, sizeof(int), compare);
-
-    int result = findKthLargest(nums, sizeof(nums) / sizeof(int), 1);
+    bool result = judgeCircle(moves);
 
     return 0;
 }
