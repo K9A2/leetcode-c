@@ -480,17 +480,25 @@ int *selfDividingNumbers(int left, int right, int *returnSize) {
     return result;
 }
 
+/* 561. Array Partition I */
+int arrayPairSum(int *nums, int numsSize) {
+
+    qsort(nums, (size_t) numsSize, sizeof(int), compare);
+
+    int sum = 0;
+    for (int i = 0; i < numsSize; i += 2) {
+        sum += *(nums + i);
+    }
+
+    return sum;
+}
+
 int main() {
 
-    int left = 1;
-    int right = 22;
-    int returnSize = 0;
+    int nums[] = {1, 4, 3, 2};
+    int numsSize = sizeof(nums) / sizeof(int);
 
-    int *result = selfDividingNumbers(left, right, &returnSize);
-
-    for (int i = 0; i < returnSize; i++) {
-        printf("%d, ", *(result + i));
-    }
+    int result = arrayPairSum(nums, numsSize);
 
     return 0;
 }
