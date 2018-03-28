@@ -450,11 +450,47 @@ bool judgeCircle(char *moves) {
     return !xticks && !yticks;
 }
 
+/* 728. Self Dividing Numbers */
+int *selfDividingNumbers(int left, int right, int *returnSize) {
+
+    int *result = (int *) calloc(10000, sizeof(int));
+    char buffer[5];
+
+    bool pass;
+    char *head;
+    *returnSize = 0;
+
+    for (int i = left; i <= right; i++) {
+        pass = true;
+        sprintf(buffer, "%d", i);
+        head = buffer;
+        while (*head != '\0') {
+            if (*head == '0' || i % (*head - 48) != 0) {
+                pass = false;
+                break;
+            }
+            head += 1;
+        }
+        if (pass) {
+            *(result + *returnSize) = i;
+            *returnSize += 1;
+        }
+    }
+
+    return result;
+}
+
 int main() {
 
-    char moves[] = "UD";
+    int left = 1;
+    int right = 22;
+    int returnSize = 0;
 
-    bool result = judgeCircle(moves);
+    int *result = selfDividingNumbers(left, right, &returnSize);
+
+    for (int i = 0; i < returnSize; i++) {
+        printf("%d, ", *(result + i));
+    }
 
     return 0;
 }
