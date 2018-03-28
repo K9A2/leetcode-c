@@ -419,14 +419,35 @@ int findKthLargest(int *nums, int numsSize, int k) {
 /* 657. Judge Route Circle */
 bool judgeCircle(char *moves) {
 
-    int alphabet[26] = {0};
-    int len = (int) strlen(moves);
+    int xticks = 0;
+    int yticks = 0;
 
-    for (int i = 0; i < len; i++) {
-        alphabet[*moves++ - 65] += 1;
+    while (*moves != '\0') {
+        switch (*moves) {
+            case 'U': {
+                yticks += 1;
+                break;
+            }
+            case 'D': {
+                yticks -= 1;
+                break;
+            }
+            case 'L': {
+                xticks -= 1;
+                break;
+            }
+            case 'R': {
+                xticks += 1;
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+        moves++;
     }
 
-    return (alphabet['U' - 65] == alphabet['D' - 65]) && (alphabet['L' - 65] == alphabet['R' - 65]) ? true : false;
+    return !xticks && !yticks;
 }
 
 int main() {
