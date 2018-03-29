@@ -450,11 +450,46 @@ bool judgeCircle(char *moves) {
     return !xticks && !yticks;
 }
 
+/* 771. Jewels and Stones */
+int numJewelsInStones(char *J, char *S) {
+
+    int count = 0;
+
+    int jewels[52] = {0};
+
+    /* Find out the types of jewels we have */
+    while (*J != '\0') {
+        if ((int) *J >= 65 && (int) *J <= 90) {
+            /* Upper case letter */
+            jewels[*J - 65] = 1;
+        } else {
+            /* Lower case letter */
+            jewels[*J - 71] = 1;
+        }
+        J += 1;
+    }
+
+    /* Find out how much jewels we have */
+    while (*S != '\0') {
+        if ((int) *S >= 65 && (int) *S <= 90 && jewels[*S - 65]) {
+            /* Upper case letter */
+            count += 1;
+        }
+        if ((int) *S >= 97 && (int) *S <= 122 && jewels[*S - 71]) {
+            count += 1;
+        }
+        S += 1;
+    }
+
+    return count;
+}
+
 int main() {
 
-    char moves[] = "UD";
+    char J[] = "aA";
+    char S[] = "aAAbbbb";
 
-    bool result = judgeCircle(moves);
+    int result = numJewelsInStones(J, S);
 
     return 0;
 }
